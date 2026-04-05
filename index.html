@@ -108,10 +108,6 @@
                 <i data-lucide="swords" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                 <span>Fight Card</span>
             </a>
-            <a href="#registrasi" class="nav-link flex flex-col items-center gap-1 text-xs text-gray-400 hover:text-white transition-colors group">
-                <i data-lucide="ticket" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                <span>Registrasi</span>
-            </a>
         </div>
     </nav>
 
@@ -135,9 +131,6 @@
             </p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-16">
-                <a href="#registrasi" class="px-8 py-4 bg-sanekala-purple hover:bg-purple-600 text-white font-bold rounded-lg shadow-[0_0_20px_rgba(124,58,237,0.5)] transition-all transform hover:scale-105 flex items-center gap-2">
-                    Daftar Sekarang <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
                 <a href="#fightcard" class="px-8 py-4 border border-gray-400 hover:border-white bg-black/30 backdrop-blur-sm text-gray-200 hover:text-white rounded-lg transition-colors">
                     Lihat Jadwal
                 </a>
@@ -189,203 +182,7 @@
         </div>
     </section>
 
-    <!-- REGISTRASI SECTION -->
-    <section id="registrasi" class="min-h-screen py-20 px-4 relative">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-12">
-                <h2 class="font-header text-4xl md:text-5xl mb-2 text-white">REGISTRASI</h2>
-                <p class="text-gray-400">Isi data diri Anda dengan lengkap dan benar.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                
-                <div class="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
-                    <div class="card-glass p-6 rounded-2xl border border-sanekala-purple/30 bg-gradient-to-br from-purple-900/20 to-black">
-                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                            <i data-lucide="wallet" class="text-sanekala-purple"></i> Pembayaran
-                        </h3>
-                        <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                            Silakan transfer biaya pendaftaran sebesar <span class="font-bold text-white">Rp 150.000</span> ke rekening berikut:
-                        </p>
-                        
-                        <div class="bg-white/5 rounded-xl p-4 border border-white/10 mb-4">
-                            <p class="text-xs text-gray-400 uppercase tracking-wide">DANA</p>
-                            <div class="flex flex-col mt-1">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-xl font-header tracking-wider text-white" id="dana-number">089662143702</span>
-                                    <button onclick="copyNumber()" class="text-sanekala-purple hover:text-white transition-colors p-2" title="Salin Nomor">
-                                        <i data-lucide="copy" class="w-4 h-4"></i>
-                                    </button>
-                                </div>
-                                <p class="text-xs text-gray-400 font-bold mt-1">a.n BAYU PANGESTU</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                            <i data-lucide="info" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
-                            <p class="text-xs text-blue-200/80">Siapkan bukti transfer dan foto profil terbaik Anda untuk keperluan poster match card.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 card-glass p-6 md:p-8 rounded-2xl">
-                    <form id="registrationForm" class="space-y-8">
-                        
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-sanekala-purple border-b border-gray-700 pb-2 flex items-center gap-2">
-                                <i data-lucide="user"></i> DATA DIRI PETARUNG
-                            </h3>
-                            
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
-                                <input type="text" name="nama" required class="w-full p-3 rounded-lg input-glass" placeholder="Nama sesuai identitas">
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm text-gray-400 mb-1">Umur <span class="text-red-500">*</span></label>
-                                    <input type="number" name="umur" required class="w-full p-3 rounded-lg input-glass" placeholder="Tahun">
-                                </div>
-                                <div>
-                                    <label class="block text-sm text-gray-400 mb-1">Jenis Kelamin <span class="text-red-500">*</span></label>
-                                    <select name="gender" required class="w-full p-3 rounded-lg input-glass bg-black">
-                                        <option value="" disabled selected>Pilih...</option>
-                                        <option value="Laki-Laki">Laki - Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">No Whatsapp Aktif <span class="text-red-500">*</span></label>
-                                <input type="tel" name="whatsapp" required class="w-full p-3 rounded-lg input-glass" placeholder="08...">
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Asal Camp / Gym / Sasana / Tim <span class="text-red-500">*</span></label>
-                                <input type="text" name="camp" required class="w-full p-3 rounded-lg input-glass" placeholder="Contoh: Sanekala Gym">
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-sanekala-purple border-b border-gray-700 pb-2 flex items-center gap-2 mt-8">
-                                <i data-lucide="dumbbell"></i> FISIK & KATEGORI
-                            </h3>
-
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm text-gray-400 mb-1">Berat Badan (kg) <span class="text-red-500">*</span></label>
-                                    <input type="number" name="berat" required class="w-full p-3 rounded-lg input-glass" placeholder="kg">
-                                </div>
-                                <div>
-                                    <label class="block text-sm text-gray-400 mb-1">Tinggi Badan (cm) <span class="text-red-500">*</span></label>
-                                    <input type="number" name="tinggi" required class="w-full p-3 rounded-lg input-glass" placeholder="cm">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Kategori Pertandingan <span class="text-red-500">*</span></label>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <div class="relative">
-                                        <input type="radio" id="cat_boxing" name="kategori_pertandingan" value="Street Boxing" class="peer hidden custom-radio" required>
-                                        <label for="cat_boxing" class="block p-3 rounded-lg border border-gray-700 bg-white/5 text-gray-400 cursor-pointer hover:bg-white/10 transition-all text-sm text-center">
-                                            Street Boxing<br><span class="text-[10px] opacity-70">(Tinju Tangan Saja)</span>
-                                        </label>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="radio" id="cat_striking" name="kategori_pertandingan" value="Freestyle Striking" class="peer hidden custom-radio">
-                                        <label for="cat_striking" class="block p-3 rounded-lg border border-gray-700 bg-white/5 text-gray-400 cursor-pointer hover:bg-white/10 transition-all text-sm text-center">
-                                            Freestyle Striking<br><span class="text-[10px] opacity-70">(Muay Thai Style)</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Pengalaman Bertanding (Record) <span class="text-red-500">*</span></label>
-                                <select name="record" required class="w-full p-3 rounded-lg input-glass bg-black">
-                                    <option value="" disabled selected>Pilih Record...</option>
-                                    <option value="0">0 (Debut)</option>
-                                    <option value="1-2">1 - 2 Pertandingan</option>
-                                    <option value="3-5">3 - 5 Pertandingan</option>
-                                    <option value="6++">6++ Pertandingan</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Kelas Yang Dipilih <span class="text-red-500">*</span></label>
-                                <select name="kelas" required class="w-full p-3 rounded-lg input-glass bg-black">
-                                    <option value="" disabled selected>Pilih Berat...</option>
-                                    <option value="45kg">45 kg</option>
-                                    <option value="48kg">48 kg</option>
-                                    <option value="51kg">51 kg</option>
-                                    <option value="54kg">54 kg</option>
-                                    <option value="57kg">57 kg</option>
-                                    <option value="60kg">60 kg</option>
-                                    <option value="63kg">63 kg</option>
-                                    <option value="66kg">66 kg</option>
-                                    <option value="70kg">70 kg</option>
-                                    <option value="74kg">74 kg</option>
-                                    <option value="77kg">77 kg</option>
-                                    <option value="80kg++">80 kg ++</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-sanekala-purple border-b border-gray-700 pb-2 flex items-center gap-2 mt-8">
-                                <i data-lucide="file-check"></i> ADMINISTRASI & WAIVER
-                            </h3>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Upload Bukti Transfer <span class="text-red-500">*</span></label>
-                                <div class="relative border-dashed border-2 border-gray-600 rounded-lg p-6 hover:border-sanekala-purple transition-colors cursor-pointer text-center group">
-                                    <input type="file" name="bukti_transfer" id="fileInputTransfer" accept="image/*,application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" required onchange="handleFileSelect(this, 'fileNameTransfer')">
-                                    <i data-lucide="upload-cloud" class="w-8 h-8 text-gray-400 group-hover:text-sanekala-purple transition-colors mx-auto mb-2"></i>
-                                    <p class="text-xs text-gray-400" id="fileNameTransfer">Klik / seret file bukti (Max 10MB)</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm text-gray-400 mb-1">Upload Foto Peserta (Poster) <span class="text-red-500">*</span></label>
-                                <div class="relative border-dashed border-2 border-gray-600 rounded-lg p-6 hover:border-sanekala-purple transition-colors cursor-pointer text-center group">
-                                    <input type="file" name="foto_peserta" id="fileInputFoto" accept="image/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" required onchange="handleFileSelect(this, 'fileNameFoto')">
-                                    <i data-lucide="camera" class="w-8 h-8 text-gray-400 group-hover:text-sanekala-purple transition-colors mx-auto mb-2"></i>
-                                    <p class="text-xs text-gray-400" id="fileNameFoto">Klik / seret foto fighter (Max 10MB)</p>
-                                </div>
-                            </div>
-
-                            <div class="bg-gray-900/50 p-4 rounded-lg border border-gray-700 text-xs text-gray-400 leading-relaxed space-y-2">
-                                <p class="font-bold text-gray-300">SURAT PERNYATAAN (WAIVER)</p>
-                                <p>Dengan mengisi formulir ini, saya menyatakan bahwa:</p>
-                                <ol class="list-decimal list-inside space-y-1 ml-1">
-                                    <li>Saya dalam kondisi sehat jasmani dan rohani.</li>
-                                    <li>Saya siap bertanding dengan sportivitas tinggi.</li>
-                                    <li>Saya tidak akan menuntut pihak panitia (SANEKALA) apabila terjadi cedera ringan maupun berat akibat pertandingan, karena ini adalah olahraga kontak fisik (body contact).</li>
-                                </ol>
-                            </div>
-
-                            <div class="flex items-start gap-3 mt-2">
-                                <div class="relative flex items-center">
-                                    <input type="checkbox" id="waiver" name="waiver_agree" value="Ya" required class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-600 checked:bg-sanekala-purple checked:border-sanekala-purple transition-all">
-                                    <i data-lucide="check" class="absolute pointer-events-none opacity-0 peer-checked:opacity-100 text-white w-3 h-3 left-1"></i>
-                                </div>
-                                <label for="waiver" class="text-sm text-gray-300 cursor-pointer select-none">
-                                    Ya, Saya Setuju dan Siap Bertanding.
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" id="submitBtn" class="w-full py-4 bg-gradient-to-r from-purple-700 to-sanekala-purple text-white font-bold rounded-lg shadow-lg hover:shadow-purple-600/50 transform hover:translate-y-[-2px] transition-all flex justify-center items-center gap-2 mt-8">
-                            <span>Kirim Pendaftaran</span>
-                            <i data-lucide="send" class="w-4 h-4"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <footer class="py-12 bg-black border-t border-white/5 text-center px-4 pb-32">
         <h2 class="font-header text-2xl text-white mb-4">SANEKALA SPARRING</h2>
         <div class="flex justify-center gap-6 mb-8">
@@ -1239,7 +1036,7 @@
                         <p class="text-gray-300 font-bold text-xl mb-1">MATCHUP LAINNYA</p>
                         <p class="text-sm text-gray-500">Fighter akan segera diumumkan.</p>
                         <div class="mt-6">
-                            <a href="#registrasi" class="text-sanekala-purple hover:text-white text-sm font-semibold underline decoration-dashed underline-offset-4">Daftar untuk menjadi bagian dari card ini</a>
+                          
                         </div>
                     </div>
                 </div>
@@ -1248,7 +1045,7 @@
             container.innerHTML = cardsHTML;
         }
 
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzpz2vOgehbg035XirxxgaHPecXNuHUm2hHTCz-LNgVXnhUp0TLEl-VmyblQiVKBKnVaQ/exec'; 
+        
 
         function initIcons() {
             if (typeof lucide !== 'undefined') {
@@ -1269,28 +1066,7 @@
             initIcons();
         }
 
-        function copyNumber() {
-            const number = document.getElementById('dana-number').innerText;
-            navigator.clipboard.writeText(number).then(() => {
-                alert('Nomor DANA berhasil disalin!');
-            });
-        }
-
-        function handleFileSelect(input, labelId) {
-            const fileNameDisplay = document.getElementById(labelId);
-            if (input.files && input.files[0]) {
-                if(input.files[0].size > 4 * 1024 * 1024) { 
-                    alert("Ukuran file terlalu besar! Maksimal 4MB.");
-                    input.value = "";
-                    fileNameDisplay.innerText = "File terlalu besar (Max 4MB)";
-                    fileNameDisplay.classList.add('text-red-500');
-                    return;
-                }
-                fileNameDisplay.innerText = input.files[0].name;
-                fileNameDisplay.classList.add('text-sanekala-purple', 'font-semibold');
-                fileNameDisplay.classList.remove('text-red-500');
-            }
-        }
+        
 
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -1312,105 +1088,7 @@
         }, { threshold: 0.3 });
         sections.forEach(section => observer.observe(section));
 
-        const form = document.getElementById('registrationForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const originalBtnContent = `<span>Kirim Pendaftaran</span><i data-lucide="send" class="w-4 h-4"></i>`;
-
-        const readFileAsBase64 = (file) => {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = () => resolve(reader.result);
-                reader.onerror = error => reject(error);
-            });
-        };
-
-        form.addEventListener('submit', async e => {
-            e.preventDefault();
-
-            if (!SCRIPT_URL || SCRIPT_URL.trim() === '') {
-                alert("Error: URL Google Script belum dipasang di kodingan.");
-                return;
-            }
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i data-lucide="loader-2" class="animate-spin mr-2"></i> Mengirim Data...`;
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-
-            try {
-                const formData = new FormData(form);
-                let dataToSend = Object.fromEntries(formData.entries());
-
-                delete dataToSend.bukti_transfer;
-                delete dataToSend.foto_peserta;
-
-                const transferFile = document.getElementById('fileInputTransfer').files[0];
-                if (transferFile) {
-                    dataToSend.bukti_transfer_name = transferFile.name;
-                    dataToSend.bukti_transfer_mime = transferFile.type;
-                    dataToSend.bukti_transfer_base64 = await readFileAsBase64(transferFile);
-                }
-
-                const fotoFile = document.getElementById('fileInputFoto').files[0];
-                if (fotoFile) {
-                    dataToSend.foto_peserta_name = fotoFile.name;
-                    dataToSend.foto_peserta_mime = fotoFile.type;
-                    dataToSend.foto_peserta_base64 = await readFileAsBase64(fotoFile);
-                }
-
-                await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    body: JSON.stringify(dataToSend),
-                    mode: 'no-cors' 
-                });
-
-                showSuccessModal();
-                resetForm();
-
-            } catch (error) {
-                console.error("Error sending data", error);
-                alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnContent;
-                if (typeof lucide !== 'undefined') lucide.createIcons();
-            }
-        });
-
-        function resetForm() {
-            form.reset();
-            const defaultText = 'Klik / seret file bukti (Max 10MB)';
-            const fileLabels = ['fileNameTransfer', 'fileNameFoto'];
-            
-            fileLabels.forEach(id => {
-                const el = document.getElementById(id);
-                if(el) {
-                    el.innerText = defaultText;
-                    el.classList.remove('text-sanekala-purple', 'font-semibold');
-                }
-            });
-        }
-
-        const modal = document.getElementById('successModal');
-        const modalContent = document.getElementById('modalContent');
-
-        function showSuccessModal() {
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContent.classList.remove('scale-90');
-                modalContent.classList.add('scale-100');
-            }, 10);
-        }
-
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modalContent.classList.remove('scale-100');
-            modalContent.classList.add('scale-90');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
+       
     </script>
 </body>
 </html>
